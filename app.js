@@ -7,6 +7,12 @@ app.use(bodyParser.urlencoded({extended:false }));
 app.use(bodyParser.json());
 const rotaUsuarios = require('./routes/rotaUsuario');
 app.use("/usuario",rotaUsuarios);
+const rotaPatrimonio = require('./routes/rotaPatrimonio');
+app.use("/patrimonio",rotaPatrimonio);
+const rotaEmpresa = require('./routes/rotaEmpresa');
+app.use("/empresa",rotaEmpresa);
+
+
 
 app.use((req,res,next)=>{
       const erro = new Error("Não encontrado!");
